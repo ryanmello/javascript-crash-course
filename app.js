@@ -38,8 +38,15 @@ console.log(document.querySelector('#title'));
 console.log(document.getElementById('title'));
 
 document.querySelector('#title').innerHTML = 'Frontend Simplified';
-document.querySelector('#title').style.color = 'red';
 document.querySelector('#title').style.fontSize = '18px';
 
 //2:30
+
+function changeTitleToRed(){
+    document.querySelector('#title').style.color = 'red';
+}
+
+function toggleDarkMode(){
+    document.querySelector('body').classList.toggle('dark-theme');
+}
 
