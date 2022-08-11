@@ -50,3 +50,47 @@ function toggleDarkMode(){
     document.querySelector('body').classList.toggle('dark-theme');
 }
 
+/*
+
+Beginner Challenges
+
+*/
+
+// calculate remainder
+function calcRemainder(num1, num2){
+    console.log(num1 % num2);
+}
+calcRemainder(4, 2);
+
+// is number odd
+function isOdd(num){
+    if(num % 2 > 0){
+        return true;
+    }
+    return false;
+    // return num % 2 !== 0;
+}
+console.log(isOdd(5));
+
+// if num is even return 1
+function booleanInteger(num){
+    if(num % 2 === 0){
+        return 1;
+    }
+    return -1;
+    // return num % 2 === 0 ? 1 : -1;
+}
+console.log(booleanInteger(6));
+
+// check if user is logged in
+function isLoggedInAndSubscribed(str1, str2){
+    if(str1 == 'LOGGED__IN' && str2 == 'SUBSCRIBED'){
+        return true;
+    }
+    return false;
+}
+console.log(isLoggedInAndSubscribed('LOGGED__IN', 'SUBSCRIBED'));
+
+
+
+
