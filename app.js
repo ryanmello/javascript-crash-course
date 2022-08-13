@@ -91,6 +91,110 @@ function isLoggedInAndSubscribed(str1, str2){
 }
 console.log(isLoggedInAndSubscribed('LOGGED__IN', 'SUBSCRIBED'));
 
+// filter out falsy
+function filterOutFalsy(elem1, elem2){
+    if(!elem1 === true){
+        return elem1;
+    }
+    return elem2;
+    // return (!elem1) ? elem1 : elem2;
+}
+console.log(filterOutFalsy(0, 500));
+
+// array length
+function arrLength(arr){
+    return arr.length;
+}
+console.log(arrLength([1, 2, 3, 4, 5]));
+
+// last element in array
+function arrLength(arr){
+    return arr[arr.length - 1];
+}
+console.log(arrLength([1, 2, 4, 8, 12]));
+
+// sum of array
+function arrSum(arr){
+    var total = 0;
+    for(var i = 0; i < arr.length; i++){
+        total += arr[i];
+    }
+    return total;
+}
+console.log(arrSum([2, 2, 2]));
+
+// add up numbers
+function progressiveSum(num){
+    var total = 0;
+    for(var i = num; i >= 0; i--, num--){
+        total += num;
+    }
+    return total;
+}
+console.log(progressiveSum(5));
+
+//seconds to minutes
+function calcTime(num){
+
+    if(num > 60){
+        let mins = (num - (num % 60)) / 60;
+        let seconds = (num % 60);
+        if(seconds < 10){
+            return '0' + mins + ':0' + seconds;
+        }
+        else{
+            return '0' + mins + ':' + seconds;
+        }
+    }
+    else{
+        return '00:' + num;
+    }
+}
+console.log(calcTime(66));
+
+//find the largets number
+function getMax(arr){
+    let basket = arr[0];
+    for(var i = 0; i < arr.length; i++){
+        if(arr[i] > basket){
+            basket = arr[i];
+        }
+    }
+    return basket;
+
+}
+console.log(getMax([5, 100, 0]));
+
+//reverse a string
+function reverseString(str){
+    var newStr = '';
+    for(var i = str.length - 1; i >= 0; i--){
+        newStr += str[i];
+    }
+    return newStr;
+}
+console.log(reverseString('abc'));
+
+// turn every element in an array into 0
+function convertToZeros(arr){
+    for(var i = 0; i < arr.length; i++){
+        arr[i] = 0;
+    }   
+    return arr;
+}
+console.log(convertToZeros([5, 100, 0]));
+
+// filter out all the apples
+function removeApples(arr){
+    var newArr = [];
+    for(var i = 0; i < arr.length; i++){
+        if(arr[i] !== 'Apple'){
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr;
+}
+console.log(removeApples(['Banana', 'Apple', 'Orange', 'Apple']));
 
 
 
