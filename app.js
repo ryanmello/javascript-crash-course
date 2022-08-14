@@ -107,6 +107,11 @@ function arrLength(arr){
 }
 console.log(arrLength([1, 2, 3, 4, 5]));
 
+/*
+
+Medium Challenges
+
+*/
 // last element in array
 function arrLength(arr){
     return arr[arr.length - 1];
@@ -196,5 +201,34 @@ function removeApples(arr){
 }
 console.log(removeApples(['Banana', 'Apple', 'Orange', 'Apple']));
 
+// show rating
+function showRating(num){
+    let rating = '';
+    for(var i = 0; i < Math.floor(num); i++){
+        rating += "*";
 
+    }
+    if(num % Math.floor(num) > 0){
+        rating += ".";
+    }
+    return rating;
+}
+console.log(showRating(3.5));
 
+// sort from low to high
+function sortNums(numbers){
+    return numbers.sort((a, b) => a - b);
+}
+console.log(sortNums([1, 5, 0, 10, 4]));
+
+// sort by highest to lowest price
+function sortHighToLow(numbers){
+    return numbers.sort((a, b) => b.price - a.price);
+}
+console.log(
+    sortHighToLow([
+        { id: 1, price: 50 }, 
+        { id: 2, price: 0 }, 
+        { id: 3, price: 500 },
+    ])
+);
