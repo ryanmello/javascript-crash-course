@@ -232,3 +232,23 @@ console.log(
         { id: 3, price: 500 },
     ])
 );
+
+// filter by userId
+async function postByUser(userId){
+    const promise = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const result = await promise.json();
+    const posts = result.filter(element => element.userId === userId);
+    console.log(posts);
+}
+postByUser(4);
+
+// first incomplete todos
+async function firstSixIncomplete(userId){
+    const promise = await fetch('https://jsonplaceholder.typicode.com/todos');
+    const result = await promise.json();
+    const incompleteTasks = result.filter(elem => !elem.completed).slice(0, 6);
+    console.log(incompleteTasks);
+}
+firstSixIncomplete(6);
+
+
